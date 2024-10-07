@@ -1,0 +1,219 @@
+/* ROOT */
+
+:root {
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    
+    --neutral-light-gray: hsl(204, 43%, 93%);
+    --neutral-grayish-blue: hsl(218, 22%, 67%);
+} 
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERIC STYLES */
+
+/* BODY */
+
+body {
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    background-color: var(--neutral-light-gray);
+}
+
+h3, h4, p {
+    color: var(--neutral-light-gray);
+}
+
+p {
+    font-size: 0.9em;
+}
+
+/* GRID CONTAINER */
+
+.product-grid-container {
+    margin: 4.5em auto;
+    display: grid;
+    grid-template-columns: 19.45em;
+    justify-content: center;
+}
+
+/* GRID ITEMS */
+
+.product-info, .subscription-info, .extra-info {
+    padding: 1.4em;
+}
+
+/* GRID ITEM 1 */
+
+.product-info {
+    background-color: white;
+}
+
+.product-info h3 {
+    color: var(--primary-cyan);
+    font-size: 1.2em;
+    margin: 0.25em 0 1.25em 0;   
+}
+
+.product-info h4 {
+    color: var(--primary-bright-yellow);
+    line-height: 1.2em;
+}
+
+.product-info p {
+    color: var(--neutral-grayish-blue);
+    line-height: 1.79em;
+    margin: 1.28em 0 0.65em 0;   
+}
+
+/* GRID ITEM 2 */
+
+.subscription-info {
+    background-color: var(--primary-cyan);
+}
+
+.subscription-info h3 {
+    margin-top: 0em;
+}
+
+.sub-price-flex {
+    display: flex;
+    align-items: center;
+    margin: 1em 0 0.384em 0;
+}
+
+.subscription-info h1 {
+    font-size: 2em;
+    color: var(--neutral-light-gray);
+    
+}
+
+.subscription-info span {
+    font-size: 1em;
+    color: var(--neutral-light-gray);
+    font-weight: 400;
+    margin-left: 0.7em;
+    opacity: 50%;
+}
+
+.subscription-info h4 {
+    font-weight: 400;
+}
+
+.subscription-info button {
+    background-color: var(--primary-bright-yellow);
+    color: var(--neutral-light-gray);
+    font-size: 0.9em;
+    font-weight: 700;
+    text-wrap: nowrap;
+    text-align: center;
+    margin: 2.09em 0 0.03em 0;
+    padding: 1.075em 7.25em;
+    border-radius: 0.4em;
+    border: none;
+}
+
+/* GRID ITEM 3 */
+
+.extra-info {
+    background-color: var(--primary-cyan);
+    opacity: 88%;
+}
+
+.extra-info-grid {
+    margin: 1.2em 0 0 0;
+    line-height: 1.24em;
+    opacity: 80%;
+}
+
+/* FOOTER */
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    color: var(--neutral-grayish-blue)
+ }
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 767px) {
+    .product-grid-container {
+        width: 39.2em;
+        height: 29.7em;
+        margin-top: 10.1em;
+        border-radius: 0.5em;
+        overflow: hidden;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 46% 54%;
+    }
+
+    /* GRID ITEM 1 */
+
+    .product-info {
+        grid-column: 1 / span 2;
+        
+    }
+
+    .product-info h3 {
+        font-size: 1.5em;
+        margin-top: 0.7em;
+    }
+
+    .product-info h4 {
+        font-size: 1.1em;
+        margin-top: -0.3em;
+    }
+
+    .product-info p {
+        font-size: 1em;
+        margin-top: 0.55em;
+        margin-bottom: -0.6em;
+        line-height: 1.65em;
+    }
+
+    /* GRID ITEM 2 */
+
+    .subscription-info {
+        padding: 2.2em 2.2em 0.5em 2.2em;
+    }
+
+    .subscription-info h3 {
+        margin: 0.2em;
+    }
+
+    .subscription-info button {
+        padding: 1.1em 6.5em 1.1em 6.5em;
+    }
+
+    /* GRID ITEM 3 */
+    
+    .extra-info h3 {
+        margin: 0.9em;
+    }
+
+    .extra-info p {
+        margin-left: 1.2em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .product-info, .subscription-info, .extra-info {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .subscription-info button {
+        padding: 1em 5em;
+        
+    }
+}
